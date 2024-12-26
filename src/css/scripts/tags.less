@@ -1,0 +1,65 @@
+// main: "../style.less"
+
+// ##########
+// DO NOT TOUCH this script unless you know what you are doing.
+// You can contact the admin at all times: patrick.meppe@tapmeppe.work
+// ##########
+
+html,
+body {
+	min-height: min(100dvh, 100vh);
+	background-color: var(--tapmeppe-color-body-background);
+	color: var(--tapmeppe-color-body-foreground);
+}
+
+a,
+button {
+	> * {
+		pointer-events: none;
+	}
+}
+
+em {
+	.mx_dashed();
+}
+
+footer,
+header {
+	background-color: var(--tapmeppe-color-navigation-background);
+	color: var(--tapmeppe-color-navigation-foreground);
+
+	.nav {
+		--bs-nav-link-color: var(--tapmeppe-color-navigation-foreground);
+		--bs-nav-link-hover-color: var(--tapmeppe-color-navigation-foreground-active);
+		// --bs-nav-link-disabled-color: var(--bs-secondary-color);
+	}
+
+	hr {
+		border-color: var(--tapmeppe-color-navigation-background-active);
+	}
+}
+
+img {
+	// @see https://youtu.be/345V2MU3E_w?si=xsQGabaiJe9VwbeI
+	vertical-align: middle; //in case source not found
+	font-style: italic; //in case source not found
+	// background-repeat: no-repeat; //blurry loading
+	// background-size: cover; //blurry loading
+	// shape-margin: 1rem; //floating
+
+	// @see https://stackoverflow.com/a/35364179/2652918
+	// image-rendering: -webkit-optimize-contrast;
+}
+
+// @see bootstrap.less
+// sup {}
+
+svg {
+	fill: currentcolor;
+	min-height: var(--tapmeppe-svg-min-height, 1em);
+	font-size: var(--tapmeppe-svg-font-size, 1.5em);
+
+	header & {
+		--tapmeppe-svg-font-size: 2em;
+	}
+}

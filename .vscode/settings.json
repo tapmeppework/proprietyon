@@ -1,0 +1,32 @@
+// Patrick Meppe, development@tapmeppe.work (25.12.2024)
+// If you are reading this, you should know that I tried to make to LiveServer work at first, but it didn't work. 
+// So I went on the hunt and discovered BrowserSync. But I'm leaving this here for the future. Maybe you can make it work. Good luck! :-)
+// @see https://github.com/ritwickdey/vscode-live-server/blob/master/docs/settings.md
+{
+	"liveServer.settings.file": "/src/pages/index.html",
+	"liveServer.settings.ignoreFiles": [
+		".vscode/**",
+		"builds/**",
+		"node_modules/**",
+		"main*.js",
+		"package.*json",
+		"*.md",
+		"*.less",
+		"*.css.map",
+	],
+	"liveServer.settings.mount": [
+		[
+			"/",
+			"/public"
+		],
+		[
+			"/",
+			"/src"
+		],
+		[
+			"/",
+			"/src/pages"
+		],
+	],
+	"liveServer.settings.port": 9013
+}

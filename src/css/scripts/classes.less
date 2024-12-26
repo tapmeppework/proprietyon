@@ -1,0 +1,306 @@
+// main: "../style.less"
+
+// ##########
+// DO NOT TOUCH this script unless you know what you are doing.
+// You can contact the admin at all times: patrick.meppe@tapmeppe.work
+// ##########
+
+@{CLASS} {
+	&aspect-ratio {
+		aspect-ratio: 1/1;
+	}
+
+	&background {
+		background-color: var(--tapmeppe-color-body-background);
+	}
+
+	&border- {
+		&translucent {
+			border-color: var(--tapmeppe-color-border-translucent) !important;
+		}
+	}
+
+	&carousel {
+		// bootstrap: position-relative
+
+		&-body {
+			// bootstrap: row flex-nowrap overflow-x-auto row-gap-0
+
+			// @see @style/scripts/pseudo.less
+			// scroll-behavior: smooth;
+
+			// scrollbar
+			@scrollbar: ~"@{CLASS}carousel-scrollbar";
+
+			&:not(@{scrollbar}) {
+				scrollbar-width: none;
+
+				/* Hide scrollbar on Firefox */
+				&::-webkit-scrollbar {
+					display: none;
+					/* Hide scrollbar on Chrome, Safari, and Edge */
+				}
+			}
+
+			// limits
+			@carouselLeft: ~"@{CLASS}carousel-left";
+			@carouselRight: ~"@{CLASS}carousel-right";
+
+			&@{carouselLeft} ~ button@{carouselLeft},
+			&@{carouselRight} ~ button@{carouselRight} {
+				cursor: not-allowed;
+				opacity: .2 !important;
+			}
+		}
+	}
+
+	&clickable {
+		cursor: pointer;
+	}
+
+	&container {
+		max-width: calc(var(--tapmeppe-dim-container, @BREAKPOINT_LARGE) + var(--bs-gutter-x)) !important;
+		// bootstrap: row-gap-0
+
+		&-large {
+			max-width: var(--tapmeppe-dim-container-large) !important;
+			// bootstrap: ms-auto, me-auto
+		}
+
+		&-medium {
+			max-width: var(--tapmeppe-dim-container-medium) !important;
+			// bootstrap: ms-auto, me-auto
+		}
+
+		&-small {
+			max-width: var(--tapmeppe-dim-container-small) !important;
+			// bootstrap: ms-auto, me-auto
+		}
+
+		&-tiny {
+			max-width: var(--tapmeppe-dim-container-tiny) !important;
+			// bootstrap: ms-auto, me-auto
+		}
+	}
+
+	&ellipsis {
+		// @see https://www.linkedin.com/posts/rammcodes_html-css-javascript-activity-7240430009230733313-MHHd
+		display: -webkit-box;
+		line-clamp: var(--tapmeppe-ellipsis-lines, 3); //the amount of lines
+		-webkit-line-clamp: var(--tapmeppe-ellipsis-lines, 3);
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+
+		&-4 {
+			--tapmeppe-ellipsis-lines: 4;
+		}
+
+		&-5 {
+			--tapmeppe-ellipsis-lines: 5;
+		}
+
+		&-6 {
+			--tapmeppe-ellipsis-lines: 6;
+		}
+
+		&-7 {
+			--tapmeppe-ellipsis-lines: 7;
+		}
+
+		&-8 {
+			--tapmeppe-ellipsis-lines: 8;
+		}
+
+		&-9 {
+			--tapmeppe-ellipsis-lines: 9;
+		}
+	}
+
+	// bootstrap has fs-1 .. fs-6
+	&font-size- {
+		&7 {
+			font-size: .75rem !important;
+		}
+
+		&8 {
+			font-size: .5rem !important;
+		}
+	}
+
+	&form {
+		*:has(:required) label:after {
+			content: "*";
+			display: inline-block;
+			color: var(--tapmeppe-color-danger);
+			margin-left: .25em;
+		}
+	}
+
+	&gradient- {
+
+		&container,
+		&text {
+			background: linear-gradient(90deg, var(--tapmeppe-color-primary) 0%, var(--tapmeppe-color-secondary) 100%)
+		}
+
+		&container {
+			color: var(--tapmeppe-color-foreground)
+		}
+
+		&text {
+			max-width: fit-content;
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+			&::selection,
+			*::selection {
+				-webkit-text-fill-color: initial
+			}
+		}
+	}
+
+	&inaccessible {
+		pointer-events: none;
+	}
+
+	&navigation- {
+		&button { //similar to bootstrap:nav-link
+			color: var(--tapmeppe-color-navigation-foreground);
+			
+			&:focus,
+			&:hover {
+				color: var(--tapmeppe-color-navigation-foreground-active)
+			}
+		}
+	}
+	
+	&panel- {
+
+		// @see https://getbootstrap.com/docs/5.3/components/navs-tabs/
+		&vertical {
+			.nav- {
+				&link {
+					text-align: left;
+
+					&.active {
+						--bs-nav-tabs-link-active-color: var(--bs-nav-link-color);
+						--bs-nav-tabs-link-active-border-color: var(--bs-border-color) var(--bs-body-bg) var(--bs-border-color) var(--bs-border-color);
+						z-index: 1; //place the active tab on top of the sibling (ideally .tab-content)
+					}
+				}
+
+				&tabs {
+					border-right: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
+					border-bottom: initial; //undo the bootstrap horizontal setting
+					margin-right: calc(-1* var(--bs-nav-tabs-border-width)); //merge border with that of the sibling (ideally .tab-content)
+
+					.nav-link {
+						margin-right: calc(-1* var(--bs-nav-tabs-border-width));
+						border-left-style: solid;
+						border-bottom-left-radius: var(--bs-nav-tabs-border-radius);
+
+						// border: var(--bs-nav-tabs-border-width) solid transparent;
+						// border-top-left-radius: var(--bs-nav-tabs-border-radius);
+
+						// undo the bootstrap horizontal settings
+						margin-bottom: initial;
+						border-top-right-radius: initial;
+
+						:focus,
+						&:hover {
+							--bs-nav-tabs-link-hover-border-color: var(--bs-border-color);
+						}
+					}
+				}
+			}
+
+			.tab-content {
+				//just like in a the bootstrap example .tab-content must be right next to .nav.nav-tabs
+				border-left: solid var(--bs-border-width) var(--bs-border-color);
+				padding-left: 1rem;
+			}
+		}
+	}
+
+	&paragraph-2 {
+		@media (min-width: @BREAKPOINT_SMALL) {
+			column-count: 2;
+			column-gap: 2rem; //1rem for each side
+			// bootstrap:gap-? can be used to reduce the gap
+			column-rule: solid var(--tapmeppe-border-width) currentColor
+		}
+	}
+
+	&pointer {
+		cursor: pointer;
+	}
+
+	&results- {
+		&filled {
+			@empty: ~"@{CLASS}results-empty";
+
+			@{empty} {
+				display: none;
+			}
+		}
+	}
+
+	&sweet-spot- {
+		&height {
+			max-height: var(--tapmeppe-dim-sweet-spot);
+		}
+
+		&width {
+			max-width: var(--tapmeppe-dim-sweet-spot);
+		}
+	}
+
+	&text {
+		&-justify {
+			// @see https://github.com/twbs/bootstrap/pull/29793
+			text-align: justify;
+		}
+	}
+
+	// @see https://getbootstrap.com/docs/5.3/components/tooltips/#custom-tooltips
+	// works perfectly but I prefer placing all bootstrap changes in one script > bootstrap.less
+	// &tooltip {
+	// 	--bs-tooltip-bg: var(--tapmeppe-scheme-project-navigation-background-abcd);
+	// 	--bs-tooltip-color: var(--tapmeppe-scheme-text-abcd);
+	// }
+
+	&width- {
+		&content {
+			max-width: fit-content !important;
+			// @media (min-width: @BREAKPOINT_SMALL) {
+			// 	max-width: fit-content !important;
+			// }
+		}
+	}
+
+	/**
+	 * z-indexes
+	 * @see https://getbootstrap.com/docs/5.3/layout/z-index/
+	 */
+	&zindex- {
+		&floater {
+			//MUST BE higher than that of the footer & 
+			// lower than that of the modals
+			z-index: 1050;
+		}
+
+		// ???
+		// &over {
+		// 	z-index: 1070;
+		// }
+
+		// &under {
+		// 	z-index: 1020;
+		// }
+	}
+
+	&zyxw {
+		color: var(--tapmeppe-color-zyxw);
+	}
+}

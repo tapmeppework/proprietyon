@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="de" data-tapmeppe-theme="auto" data-bs-theme="auto">
+
+	<head>
+		<link rel="alternate" href="https://tapmeppe.work/de" hreflang="de" />
+		<link rel="alternate" href="https://tapmeppe.work/fr" hreflang="fr" />
+		<link rel="apple-touch-icon" href="/images/favicon.png" type="image/png" />
+		<link rel="canonical" href="https://tapmeppe.work" />
+		<link rel="icon" type="image/ico" href="/images/favicon.ico" />
+		<link rel="preload" as="image" href="/images/favicon.ico" fetchpriority="high">
+		<link rel="preload" as="image" href="/images/favicon.png" fetchpriority="high">
+		<link rel="preload" as="image" href="/images/logo.png" fetchpriority="high">
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/leaflet.css">
+		<link rel="stylesheet" href="/css/style.css">
+		<!-- ... -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+		<!-- <meta name="apple-mobile-web-app-status-bar-style" content="#172328"> -->
+		<!-- <meta name="apple-mobile-web-app-title" content="<?php echo $name ?>"> -->
+		<meta name="application-name" content="proprietyon">
+		<meta name="author" content="Patrick Meppe, patrick.meppe@tapmeppe.work">
+		<meta name="description"
+			content="Verwandlung von Ideen 💡, in digitale Lösungen 🚀. Von der Afro-Community 🌍. Für die Afro-Community 🤝🏿.">
+		<!-- <meta name="format-detection" content="telephone=no"> -->
+		<meta name="generator" content="@tapmeppe/proprietyon v1.0">
+		<meta name="keywords" content="tapmeppe, t@pm3pp3, tapmeppework, t@pm3pp3 w0rk, afro-tech, afro-community">
+		<!-- <meta name="msapplication-config" content=""> -->
+		<meta name="msapplication-TileColor" content="#172328">
+		<meta name="robots" content="index, follow">
+		<meta name="theme-color" content="#172328">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="article:author" content="Patrick Meppe, patrick.meppe@tapmeppe.work">
+		<meta property="og:author" content="Patrick Meppe, patrick.meppe@tapmeppe.work">
+		<meta property="og:description"
+			content="Verwandlung von Ideen 💡, in digitale Lösungen 🚀. Von der Afro-Community 🌍. Für die Afro-Community 🤝🏿.">
+		<meta property="og:image" content="/images/icon.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:locale" content="de">
+		<meta property="og:title" content="t@pm3pp3 w0rk 😎💻">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://tapmeppe.work">
+		<meta property="twitter:author" content="Patrick Meppe, patrick.meppe@tapmeppe.work">
+		<meta property="twitter:description"
+			content="Verwandlung von Ideen 💡, in digitale Lösungen 🚀. Von der Afro-Community 🌍. Für die Afro-Community 🤝🏿.">
+		<meta property="twitter:image" content="/images/icon.png">
+		<meta property="twitter:title" content="t@pm3pp3 w0rk 😎💻">
+		<!-- ... -->
+		<script src="/js/bootstrap.bundle.min.js" defer></script>
+		<script src="/js/leaflet.js" defer></script>
+		<script src="/js/logic.js" defer></script>
+		<!-- ... -->
+		<title>t@pm3pp3 w0rk 😎💻</title>
+	</head>
+
+	<body>
+		<header class="sticky-top">
+			<nav class="navbar py-3">
+				<div class="tapmeppe-container container-lg ">
+					<div class="row justify-content-center text-center w-100 gx-0">
+						<!-- header left - start -->
+						<div class="d-inline-flex align-items-center justify-content-start col-auto">
+							<a class="navbar-brand tapmeppe-logo p-0 d-inline-block" href="#introduction">
+								<img class="h-100 d-block d-md-none rounded-2" src="/images/favicon.png"
+									alt="t@pm3pp3 w0rk 😎💻 - favicon">
+								<img class="h-100 d-none d-md-block rounded-2" src="/images/logo.png" alt="t@pm3pp3 w0rk 😎💻 - logo">
+							</a>
+						</div>
+						<!-- header left - end -->
+						<!-- header right - start -->
+						<div class="d-inline-flex align-items-center justify-content-end col">
+							<ul class="nav nav-pills">
+								<li class="nav-item">
+									<a class="nav-link d-inline-flex justify-content-center align-items-center gap-2" href="#projects">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+											data-tapmeppe-fontawesome="diagram-project">
+											<path
+												d="M0 80C0 53.5 21.5 32 48 32l96 0c26.5 0 48 21.5 48 48l0 16 192 0 0-16c0-26.5 21.5-48 48-48l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-16-192 0 0 16c0 1.7-.1 3.4-.3 5L272 288l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-96c0-1.7 .1-3.4 .3-5L144 224l-96 0c-26.5 0-48-21.5-48-48L0 80z" />
+										</svg>
+										<span class="d-none d-sm-block">Projekte</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link d-inline-flex justify-content-center align-items-center gap-2" href="#team">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+											data-tapmeppe-fontawesome="people-group">
+											<path
+												d="M72 88a56 56 0 1 1 112 0A56 56 0 1 1 72 88zM64 245.7C54 256.9 48 271.8 48 288s6 31.1 16 42.3l0-84.7zm144.4-49.3C178.7 222.7 160 261.2 160 304c0 34.3 12 65.8 32 90.5l0 21.5c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-26.8C26.2 371.2 0 332.7 0 288c0-61.9 50.1-112 112-112l32 0c24 0 46.2 7.5 64.4 20.3zM448 416l0-21.5c20-24.7 32-56.2 32-90.5c0-42.8-18.7-81.3-48.4-107.7C449.8 183.5 472 176 496 176l32 0c61.9 0 112 50.1 112 112c0 44.7-26.2 83.2-64 101.2l0 26.8c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32zm8-328a56 56 0 1 1 112 0A56 56 0 1 1 456 88zM576 245.7l0 84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM320 32a64 64 0 1 1 0 128 64 64 0 1 1 0-128zM240 304c0 16.2 6 31 16 42.3l0-84.7c-10 11.3-16 26.1-16 42.3zm144-42.3l0 84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM448 304c0 44.7-26.2 83.2-64 101.2l0 42.8c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-42.8c-37.8-18-64-56.5-64-101.2c0-61.9 50.1-112 112-112l32 0c61.9 0 112 50.1 112 112z" />
+										</svg>
+										<span class="d-none d-sm-block">Team</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link d-inline-flex justify-content-center align-items-center gap-2" href="#location">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+											data-tapmeppe-fontawesome="map-location-dot">
+											<path
+												d="M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152l0 270.8c0 9.8-6 18.6-15.1 22.3L416 503l0-302.6zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6l0 251.4L32.9 502.7C17.1 509 0 497.4 0 480.4L0 209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77l0 249.3L192 449.4 192 255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z" />
+										</svg>
+										<span class="d-none d-sm-block">Standort</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- header right - end -->
+					</div>
+				</div>
+			</nav>
+			<hr class="m-0">
+			<!-- TODO info button = bloginfo('description') -->
+			<!-- <div class="col-auto">Celebrating our Afro heritage 💪🏿 by digitally bridging distances 🚀.</div> -->
+		</header>
+		<main class="d-flex flex-column" data-bs-spy="scroll" data-bs-target="header > nav">
+			<!-- area - home - start -->
+			<article class="tapmeppe-article" id="introduction">
+				<div class="tapmeppe-container container-lg d-flex flex-column row-gap-4">
+					<section>
+						<img class="img-fluid rounded-2" src="/images/banner-2024-1760x600.gif" alt="Banner 2024">
+					</section>
+					<h1 class="mx-md-5 h3 mb-0 mt-5 fw-bolder">
+						<span class="text-nowrap">
+							<span class="tapmeppe-gradient-text">Verwandlung von Ideen</span>
+							💡
+							<span class="tapmeppe-gradient-text">,</span>
+						</span>
+						<span class="text-nowrap">
+							<span class="tapmeppe-gradient-text">in digitale Lösungen</span>
+							🚀
+							<span class="tapmeppe-gradient-text">.</span>
+						</span><br>
+						<span class="text-nowrap">
+							<span class="tapmeppe-gradient-text">Von der Afro-Community</span>
+							🌍
+							<span class="tapmeppe-gradient-text">.</span>
+						</span>
+						<span class="text-nowrap">
+							<span class="tapmeppe-gradient-text">Für die Afro-Community</span>
+							🤝🏿
+							<span class="tapmeppe-gradient-text">.</span>
+						</span>
+					</h1>
+					<section class="mx-md-5">
+						<div>
+							<strong>t@pm3pp3 w0rk</strong>
+							trägt stolz zur digitalen Transformation der afrikanischen Community bei.
+						</div>
+						<div>
+							Unser Ziel ist es, die afrikanische Kultur durch authentische digitale Projekte zu feiern.
+							Wir wünschen uns eine afrikanische Community, ausgestattet mit digitalen Werkzeugen, die weltweit Erfolg
+							hat und gleichzeitig ihre kulturelle Identität bewahrt.
+						</div>
+					</section>
+					<section>
+						<div class="row row-cols-1 row-cols-md-2 g-2">
+							<!-- home - challenges - start -->
+							<div class="col" id="introduction-challenges">
+								<div class="card h-100 tapmeppe-gradient-container">
+									<div class="card-header">
+										<h2 class="card-title h5">Unsere alltägliche Herausforderungen 🤞🏿😩.</h2>
+									</div>
+									<div class="card-body">
+										<ul>
+											<li>Der Wunsch nach digitalen Werkzeugen, die <em>unsere</em> Bedürfnisse und kulturellen Werte
+												wirklich widerspiegeln.</li>
+											<li>Der Drang nach Innovation, ohne die Verbindung zu unseren Wurzeln zu verlieren.</li>
+											<li>Die Suche nach praktischen Lösungen für alltägliche Probleme - sei es in den Bereichen
+												Bildung, Handel, Kommunikation
+												oder Organisation.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- home - challenges - end -->
+							<!-- home - what we do - start -->
+							<div class="col" id="introduction-what-we-do">
+								<div class="card h-100 tapmeppe-gradient-container">
+									<div class="card-header">
+										<h2 class="card-title h5">Was wir tun 🤘🏿😎</h2>
+									</div>
+									<div class="card-body">
+										<ul>
+											<li>
+												Wir <em>hören zu</em>.
+												Wir identifizieren die individuellen Bedürfnisse und Probleme unserer Community und nehmen uns
+												die Zeit, ihre
+												Wurzeln zu verstehen.
+											</li>
+											<li>
+												Wir <em>gestalten gemeinsam</em>.
+												Indem wir bewährte Ansätze und Konzepte auf unsere Community zuschneiden, schaffen wir Lösungen,
+												die den kulturellen
+												und praktischen Bedürfnissen der afrikanischen Community gerecht werden.
+											</li>
+											<li>
+												Wir <em>ermöglichen Transformation</em>.
+												Unsere Lösungen sind nicht nur Werkzeuge, sondern Brücken zu einer Welt neuer Möglichkeiten.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- home - what we do - end -->
+							<!-- home - your transformation - start -->
+							<div class="col" id="introduction-transformation">
+								<div class="card h-100 tapmeppe-gradient-container">
+									<div class="card-header">
+										<h2 class="card-title h5">Deine Transformation 👊🏿😋</h2>
+									</div>
+									<div class="card-body">
+										Stell dir vor, du hast Zugang zu Werkzeugen, die intuitiv und <em>für dich 🤩</em> gemacht sind.
+										Lösungen, die:
+										<ul>
+											<li>Deinen Alltag erleichtern.</li>
+											<li>Dir helfen, produktiver zu sein.</li>
+											<li>Die afrikanische Kultur auf authentische und innovative Weise feiern.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- home - your transformation - end -->
+							<!-- home - you will feel - start -->
+							<div class="col">
+								<div class="card h-100 tapmeppe-gradient-container">
+									<div class="card-header">
+										<h2 class="card-title h5">Wie wirst du dich mit uns fühlen 👌🏿😊?</h2>
+									</div>
+									<div class="card-body">
+										Mit Produkten und Dienstleistungen von <strong>t@pm3pp3 w0rk</strong> an deiner Seite wirst du dich
+										wie folgt fühlen:
+										<ul>
+											<li>
+												<strong>Wahrgenommen</strong>:
+												Wir sprechen deine Sprache und verstehen deine Gedanken.
+											</li>
+											<li>
+												<strong>Unterstützt</strong>:
+												Du wirst mit Werkzeugen ausgestattet sein, die wirklich einen Unterschied machen.
+											</li>
+											<li>
+												<strong>Stolz</strong>:
+												Du wirst dich als Teil einer größeren Bewegung für Veränderung, inspiriert fühlen.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- home - you will feel - end -->
+						</div>
+					</section>
+				</div>
+			</article>
+			<!-- area - home - end -->
+			<!-- area - projects - start -->
+			<article class="tapmeppe-article" id="projects">
+				<div class="tapmeppe-container container-lg d-flex flex-column row-gap-4">
+					<h2 class="mx-md-5 h3 fw-bolder tapmeppe-gradient-text">Unsere Meisterwerke</h2>
+					<section>
+						<div class="card mb-3 tapmeppe-gradient-container">
+							<div class="row g-0">
+								<div class="col-md-4 d-inline-flex align-items-center justify-content-center p-2">
+									<div class="border border-3 tapmeppe-border-translucent rounded-circle overflow-hidden">
+										<img src="/images/afroshops-favicon.png" class="img-fluid rounded" alt="AfroShops 🛒🧺 - icon"
+											loading="lazy">
+									</div>
+								</div>
+								<div class="col-md-8 d-inline-flex align-items-center">
+									<!-- <div class="card-header"></div> -->
+									<div class="card-body">
+										<h3 class="card-title h5">AfroShops 🛒🧺</h3>
+										<p class="card-text">
+											AfroShops ist ein Online-Marktplatz 🛒, der die afrikanische Diaspora in der DACH-Region mit
+											leidenschaftlichen
+											Verkäufern afrozentrischer Waren verbindet. So wird die afrikanische Kultur und das afrikanische
+											Erbe durch authentische
+											Produkte gefeiert.
+										</p>
+										<p class="card-text d-none d-md-block mt-2">
+											<a href="https://afro-shops.com"
+												class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2"
+												target="_blank">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+													<path
+														d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+												</svg>
+												<span class="text-nowrap">Mehr lesen</span>
+											</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="card-footer d-block d-md-none">
+								<a href="https://afro-shops.com"
+									class="btn btn-outline-secondary d-inline-flex justify-content-center align-items-center gap-2"
+									target="_blank">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+										<path
+											d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+									</svg>
+									<span class="text-nowrap">Mehr lesen</span>
+								</a>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+			<!-- area - projects - end -->
+			<!-- area - team - start -->
+			<article class="tapmeppe-article" id="team">
+				<div class="tapmeppe-container container-lg d-flex flex-column row-gap-4">
+					<h2 class="mx-md-5 h3 fw-bolder tapmeppe-gradient-text">Wer sind wir?</h2>
+					<section>
+						<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
+							<!-- team - founder - start -->
+							<div class="col" id="team-founder">
+								<div class="card h-100 tapmeppe-gradient-container">
+									<div class="m-2">
+										<div
+											class="border border-3 tapmeppe-border-translucent rounded-circle w-100 tapmeppe-aspect-ratio overflow-y-hidden">
+											<img src="/images/team-patrick.png" class="card-img-top" alt="Team Member - Patrick"
+												loading="lazy">
+										</div>
+									</div>
+									<div class="card-body">
+										<h3 class="card-title h5">Patrick Meppe</h3>
+										<div class="card-text mb-2">
+											<em>Mein Name steht an der Tür.</em>
+										</div>
+										<div class="card-text">
+											Ich bin ein leidenschaftlicher Analytiker, ein erfahrener Informatiker und ein begeisterter
+											Unternehmer, der mit allen Phasen moderner Entwicklung vertraut ist.<br>
+											AfroShops ist nur der Anfang.
+										</div>
+									</div>
+									<div class="card-footer text-body-secondary">
+										<div class="btn-group" role="group" aria-label="More about the team member">
+											<a class="btn btn-outline-secondary" target="_blank" href="https://founder.tapmeppe.work/de">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-tapmeppe-fontawesome="globe">
+													<path
+														d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z" />
+												</svg>
+											</a>
+											<a class="btn btn-outline-secondary" target="_blank"
+												href="https://www.linkedin.com/in/patrick-meppe/">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+													data-tapmeppe-fontawesome="linkedin:brand">
+													<path
+														d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- team - founder - end -->
+							<!-- team - marketing 1 - start -->
+							<div class="col" id="team-marketing-1">
+								<div class="card h-100 tapmeppe-gradient-container">
+									<div class="m-2">
+										<div
+											class="border border-3 tapmeppe-border-translucent rounded-circle w-100 tapmeppe-aspect-ratio overflow-y-hidden">
+											<img src="/images/team-fraichenelle.jpg" class="card-img-top" alt="Team Member - Marketing"
+												loading="lazy">
+										</div>
+									</div>
+									<div class="card-body">
+										<h3 class="card-title h5">Fraichenelle Atoukoh</h3>
+										<div class="card-text mb-2">
+											<em>Community-Richterin</em>
+										</div>
+										<div class="card-text">
+											Meine Aufgabe ist es, unsere Produkte hervorzuheben und sicherzustellen, dass sie den Erwartungen
+											unserer Community
+											entsprechen. AfroShops ist mehr als nur ein Marktplatz, es ist ein Ort, an dem Qualität, Kultur
+											und Vielfalt
+											zusammenkommen.
+										</div>
+									</div>
+									<div class="card-footer text-body-secondary">
+										<div class="btn-group" role="group" aria-label="More about the team member">
+											<a class="btn btn-outline-secondary" target="_blank"
+												href="https://www.linkedin.com/in/fraichenelle-atoukoh-a8b642264/">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+													data-tapmeppe-fontawesome="linkedin:brand">
+													<path
+														d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- team - marketing 1 - end -->
+							<!-- team - marketing 2 - start -->
+							<div class="col" id="team-marketing-2">
+								<div class="card h-100 tapmeppe-gradient-container">
+									<div class="m-2">
+										<div
+											class="border border-3 tapmeppe-border-translucent rounded-circle w-100 tapmeppe-aspect-ratio overflow-y-hidden">
+											<img src="/images/team-zyxw-marketer.png" class="card-img-top" alt="Team Member - Marketing"
+												loading="lazy">
+										</div>
+									</div>
+									<div class="card-body">
+										<h3 class="card-title h5">Marketing dos</h3>
+										<div class="card-text mb-2"><em>Kundenflüsterin</em></div>
+										<div class="card-text">
+											<span class="fs-3">🐵 🙈 🙉 🙊</span>
+										</div>
+									</div>
+									<div class="card-footer text-body-secondary">
+										<div class="btn-group" role="group" aria-label="More about the team member">
+											<a class="btn btn-outline-secondary disabled" target="_blank" href="https://www.linkedin.com/in/">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+													data-tapmeppe-fontawesome="linkedin:brand">
+													<path
+														d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- team - marketing 2 - end -->
+							<!-- team - designer - start -->
+							<div class="col" id="team-designer">
+								<div class="card h-100 tapmeppe-gradient-container">
+									<div class="m-2">
+										<div
+											class="border border-3 tapmeppe-border-translucent rounded-circle w-100 tapmeppe-aspect-ratio overflow-y-hidden">
+											<img src="/images/team-waerlick.jpg" class="card-img-top" alt="Team Member - Designer"
+												loading="lazy">
+										</div>
+									</div>
+									<div class="card-body">
+										<h3 class="card-title h5">Wärlick Mpuetu</h3>
+										<div class="card-text mb-2"><em>Visueller Magier</em></div>
+										<div class="card-text">
+											Ich sorge für ein ansprechendes Design, das unsere Vision zum Leben erweckt. Mit Kreativität
+											erschaffe ich Grafiken,
+											Animationen und Sounds, die unsere Botschaft klar und authentisch transportieren.
+										</div>
+									</div>
+									<div class="card-footer text-body-secondary">
+										<div class="btn-group" role="group" aria-label="More about the team member">
+											<a class="btn btn-outline-secondary" target="_blank"
+												href="https://www.linkedin.com/in/w%C3%A4rlick-mpuetu/">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+													data-tapmeppe-fontawesome="linkedin:brand">
+													<path
+														d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- team - designer - end -->
+							<!-- team - tests engineer - start -->
+							<div class="col" id="team-tests-engineer">
+								<div class="card h-100 tapmeppe-gradient-container">
+									<div class="m-2">
+										<div
+											class="border border-3 tapmeppe-border-translucent rounded-circle w-100 tapmeppe-aspect-ratio overflow-y-hidden">
+											<img src="/images/team-zyxw-tester.png" class="card-img-top" alt="Team Member - Tests Engineer"
+												loading="lazy">
+										</div>
+									</div>
+									<div class="card-body">
+										<h3 class="card-title h5">Securitor</h3>
+										<div class="card-text mb-2"><em>Tests-Guru</em></div>
+										<div class="card-text">
+											<span class="fs-3">🐵 🙈 🙉 🙊</span>
+										</div>
+									</div>
+									<div class="card-footer text-body-secondary">
+										<div class="btn-group" role="group" aria-label="More about the team member">
+											<a class="btn btn-outline-secondary disabled" target="_blank" href="https://www.linkedin.com/in/">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+													data-tapmeppe-fontawesome="linkedin:brand">
+													<path
+														d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- team - tests engineer - end -->
+							<!-- team - developer 1 - start -->
+							<div class="col" id="team-developer-1">
+								<div class="card h-100 tapmeppe-gradient-container">
+									<div class="m-2">
+										<div
+											class="border border-3 tapmeppe-border-translucent rounded-circle w-100 tapmeppe-aspect-ratio overflow-y-hidden">
+											<img src="/images/team-donald.webp" class="card-img-top" alt="Team Member - Developer 1"
+												loading="lazy">
+										</div>
+									</div>
+									<div class="card-body">
+										<h3 class="card-title h5">Donald Donchi</h3>
+										<div class="card-text mb-2"><em>Coder im Werden</em></div>
+										<div class="card-text">
+											Ich verwandle Ideen in robuste Lösungen.
+											Als Junior-Full-Stack-Entwickler betreue ich den Entwicklungszyklus,
+											von der Analyse bis zur Umsetzung.
+											Meine Arbeit gewährleistet zuverlässige digitale Produkte.
+										</div>
+									</div>
+									<div class="card-footer text-body-secondary">
+										<div class="btn-group" role="group" aria-label="More about the team member">
+											<a class="btn btn-outline-secondary" target="_blank"
+												href="https://www.linkedin.com/in/donald-donchi/">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+													data-tapmeppe-fontawesome="linkedin:brand">
+													<path
+														d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- team - developer 1 - end -->
+							<!-- team - developer 2 - start -->
+							<div class="col" id="team-developer-2">
+								<div class="card h-100 tapmeppe-gradient-container">
+									<div class="m-2">
+										<div
+											class="border border-3 tapmeppe-border-translucent rounded-circle w-100 tapmeppe-aspect-ratio overflow-y-hidden">
+											<img src="/images/team-zyxw-developer.png" class="card-img-top" alt="Team Member - Developer 2"
+												loading="lazy">
+										</div>
+									</div>
+									<div class="card-body">
+										<h3 class="card-title h5">I code, so I am.</h3>
+										<div class="card-text mb-2"><em>Coder im Werden</em></div>
+										<div class="card-text">
+											<span class="fs-3">🐵 🙈 🙉 🙊</span>
+										</div>
+									</div>
+									<div class="card-footer text-body-secondary">
+										<div class="btn-group" role="group" aria-label="More about the team member">
+											<a class="btn btn-outline-secondary disabled" target="_blank" href="https://www.linkedin.com/in/">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+													data-tapmeppe-fontawesome="linkedin:brand">
+													<path
+														d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- team - developer 2 - end -->
+						</div>
+					</section>
+				</div>
+			</article>
+			<!-- area - team - end -->
+			<!-- area - location - start -->
+			<article class="tapmeppe-article" id="location">
+				<div class="tapmeppe-container container-lg d-flex flex-column row-gap-4">
+					<h2 class="mx-md-5 h3 fw-bolder tapmeppe-gradient-text">Veni, vidi, vici</h2>
+					<section id="map">
+						<div class="tapmeppe-map rounded-2"></div><!-- map -->
+						<template>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-tapmeppe-fontawesome="location-dot">
+								<path
+									d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+							</svg>
+						</template>
+						<template>Hier findet die Show statt.</template>
+					</section>
+				</div>
+			</article>
+			<!-- area - location - end -->
+		</main>
+		<footer class="sticky-md-bottom">
+			<hr class="m-0">
+			<section class="">
+				<div class="tapmeppe-container container-lg ">
+					<div class="row row-cols-1 row-cols-sm-3 align-items-center gy-2 py-2">
+						<div class="col d-flex align-items-center">
+							<ul class="nav m-auto m-sm-0">
+								<a class="nav-link tapmeppe-clickable" data-bs-toggle="modal" data-bs-target="#contact">Kontakt</a>
+								<a class="nav-link tapmeppe-clickable" data-bs-toggle="modal"
+									data-bs-target="#legal-notice">Impressum</a>
+							</ul>
+						</div>
+						<div class="col d-flex align-items-center">
+							<div class="dropdown mx-auto">
+								<button
+									class="tapmeppe-navigation-button btn border d-inline-flex justify-content-center align-items-center gap-2 dropdown-toggle"
+									type="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-tapmeppe-fontawesome="language">
+										<path
+											d="M0 128C0 92.7 28.7 64 64 64l192 0 48 0 16 0 256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64l-256 0-16 0-48 0L64 448c-35.3 0-64-28.7-64-64L0 128zm320 0l0 256 256 0 0-256-256 0zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1 73.6 0 8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276l-38 0 19-42.8zM448 164c11 0 20 9 20 20l0 4 44 0 16 0c11 0 20 9 20 20s-9 20-20 20l-2 0-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45L448 228l-72 0c-11 0-20-9-20-20s9-20 20-20l52 0 0-4c0-11 9-20 20-20z" />
+									</svg>
+									<span>Deutsch</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="/">English</a></li>
+									<li><a class="dropdown-item" href="/fr">Francais</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col d-flex align-items-center gap-1 justify-content-end placeholder-glow">
+							<div class="mx-auto mx-sm-0 text-nowrap text-truncate">
+								Copyright &copy; <span id="footer-date" class="placeholder">????</span>
+								t@pm3pp3 w0rk
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</footer>
+		<aside>
+			<!-- back to top - start -->
+			<button
+				class="tapmeppe-zindex-floater tapmeppe-aspect-ratio btn btn-primary d-flex justify-content-center align-items-center rounded-circle position-fixed bottom-0 end-0 m-4 m-md-5 d-none"
+				id="scroller-to-top" type="button" data-bs-toggle="tooltip" aria-label="Nach oben scrollen."
+				data-bs-title="Nach oben scrollen.">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-tapmeppe-fontawesome="chevron-up">
+					<path
+						d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
+				</svg>
+			</button>
+			<!-- back to top - end -->
+			<!-- contact - start -->
+			<section class="modal fade" id="contact" data-bs-keyboard="true" tabindex="-1" aria-labelledby="contact-head"
+				aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title h4" id="contact-head">Sollen wir reden 💬?</h2>
+							<button type="button"
+								class="btn btn-outline-secondary d-inline-flex justify-content-center align-items-center ms-auto"
+								data-bs-dismiss="modal" aria-label="Close">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+									<path
+										d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z">
+									</path>
+								</svg>
+							</button>
+						</div>
+						<div class="modal-body d-flex flex-column gap-4">
+							<div>
+								<h3 class="h5">E-Mail</h3>
+								<p>
+									<a class="d-inline-flex justify-content-center align-items-center gap-2"
+										href="mailto:info@tapmeppe.work?subject=Guten Morgen und guten Abend.&body=Hallo! Wir sollten uns unterhalten 😃."
+										target="_blank">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-tapmeppe-fontawesome="at">
+											<path
+												d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256l0 32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32l0 80 0 32c0 17.7 14.3 32 32 32s32-14.3 32-32l0-32c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
+										</svg>
+										<span>info@tapmeppe.work</span>
+									</a>
+								</p>
+							</div>
+							<div>
+								<h3 class="h5">Video-Call</h3>
+								<p>
+									<a class="d-inline-flex justify-content-center align-items-center gap-2"
+										href="https://calendly.com/patrick-meppe-tapmeppe/conference-call" target="_blank">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+											<path
+												d="M96 32l0 32L48 64C21.5 64 0 85.5 0 112l0 48 448 0 0-48c0-26.5-21.5-48-48-48l-48 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32L160 64l0-32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192L0 192 0 464c0 26.5 21.5 48 48 48l352 0c26.5 0 48-21.5 48-48l0-272zM224 248c13.3 0 24 10.7 24 24l0 56 56 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-56 0 0 56c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-56-56 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l56 0 0-56c0-13.3 10.7-24 24-24z" />
+										</svg>
+										<span class="text-nowrap">Termin vereinbaren</span>
+									</a>
+								</p>
+							</div>
+							<div>
+								<h3 class="h5">Soziale Netzwerke</h3>
+								<div class="btn-group" role="group">
+									<a class="btn btn-brand-linkedin d-inline-flex justify-content-center align-items-center gap-2"
+										href="https://www.linkedin.com/company/tapmeppework" target="_blank" data-bs-toggle="tooltip"
+										data-bs-title="LinkedIn company page">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-tapmeppe-fontawesome="linkedin">
+											<path
+												d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+										</svg>
+										<span>LinkedIn</span>
+									</a>
+									<a class="btn btn-brand-youtube d-inline-flex justify-content-center align-items-center gap-2 disabled"
+										href="https://www.youtube.com/@tapmeppework" target="_blank" data-bs-toggle="tooltip"
+										data-bs-title="YouTube company page">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-tapmeppe-fontawesome="youtube">
+											<path
+												d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+										</svg>
+										<span>YouTube</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- contact - end -->
+			<!-- legal notice - start -->
+			<section class="modal fade" id="legal-notice" data-bs-keyboard="true" tabindex="-1"
+				aria-labelledby="legal-notice-head" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title h4" id="legal-notice-head">Rechtliche Hinweise</h2>
+							<button type="button"
+								class="btn btn-outline-secondary d-inline-flex justify-content-center align-items-center ms-auto"
+								data-bs-dismiss="modal" aria-label="Close">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+									<path
+										d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z">
+									</path>
+								</svg>
+							</button>
+						</div>
+						<div class="modal-body d-flex flex-column gap-4">
+							<div>
+								<h3 class="h5">Angaben gemäß § 5 TMG</h3>
+								<p>
+									<span class="text-nowrap">t@pm3pp3 w0rk</span><br>
+									<span class="text-nowrap">69250 Schönau</span><br>
+									<span class="text-nowrap">Baden Württemberg</span><br>
+									<span class="text-nowrap">Deutschland</span>
+								</p>
+							</div>
+							<div>
+								<h3 class="h5">Verantwortlich für den Inhalt</h3>
+								<p>
+									<span class="text-nowrap">Patrick Meppe</span><br>
+									<a class="d-inline-flex justify-content-center align-items-center gap-2"
+										href="mailto:patrick.meppe@tapmeppe.work" target="_blank">patrick.meppe@tapmeppe.work</a>
+								</p>
+							</div>
+							<div>
+								<h3 class="h5">Ehrenvolle Hinweise</h3>
+								<p>
+									Das Design ist stark von <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> inspiriert.
+								</p>
+								<p>
+									Die SVG-Icons werden von <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+									bereitgestellt.
+								</p>
+								<p>
+									Die interaktive Karte wird von
+									<a href="https://leafletjs.com/" target="_blank">Leaflet</a> &
+									<a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>
+									bereitgestellt.
+								</p>
+								<p>
+									<a href="https://browsersync.io/" target="_blank">BrowserSync</a>,
+									<a href="https://lesscss.org/" target="_blank">Less CSS</a> und
+									<a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
+									werden im Hintergrund eingesetzt, um die Dev-Experience zu verbessern.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- legal notice - end -->
+		</aside>
+	</body>
+
+</html>

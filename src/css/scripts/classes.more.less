@@ -1,0 +1,113 @@
+// main: "../style.less"
+
+/**
+ * This script is made for custom classes that are used once or twice for specific cases.
+ */
+@{CLASS} {
+	&article {
+		// `padding` is used by the scroll-spy as fallback to `root-margin` 
+		// not working with the sticky-top header as I would like.
+		// @see https://getbootstrap.com/docs/5.3/components/scrollspy/#options
+		// `main.row-gap-5` is not working either.
+		padding: 6em 0;
+
+		&:nth-child(even) {
+			background-color: var(--tapmeppe-color-block-even);
+		}
+	}
+
+	&cloud {
+		// @see https: //dev.to/alvaromontoro/create-a-tag-cloud-with-html-and-css-1e90
+		list-style: none;
+		line-height: 2.5em;
+
+		a {
+			--tapmeppe-cloud-weight: 4;
+			font-size: calc(var(--tapmeppe-cloud-weight) * 0.25em + 0.75em);
+			opacity: calc(var(--tapmeppe-cloud-weight) * .05 + .5);
+			display: block;
+			padding: 0.125em 0.25em;
+			text-decoration: none;
+			position: relative;
+			transition: scale .5s, opacity .5s;
+
+			&:hover,
+			&:focus {
+				scale: 1.5;
+				opacity: 1;
+				z-index: 1;
+				background-color: rgba(var(--tapmeppe-color-background-rgb), .75);
+			}
+		}
+	}
+
+	&logo {
+		height: min(50px, 2.5em)
+	}
+
+	&map {
+		height: 20rem;
+
+		.leaflet- {
+			&attribution-flag {
+				.mx_hide() !important
+			}
+
+			&control-zoom- {
+
+				&in,
+				&out {
+					background-color: var(--tapmeppe-color-primary) !important;
+					color: var(--tapmeppe-color-foreground) !important;
+					border-color: var(--tapmeppe-color-primary-active) !important;
+				}
+			}
+		}
+
+		&-marker svg {
+			scale: 1.5;
+			margin-top: -1em;
+			color: var(--tapmeppe-color-primary) !important;
+
+			> * {
+				user-select: none;
+			}
+		}
+
+		&-popup {
+
+			&.leaflet-popup {
+				margin-left: .125em;
+				margin-bottom: 2em;
+			}
+
+			.leaflet-popup- {
+
+				&content-wrapper,
+				&content,
+				&tip {
+					background-color: var(--tapmeppe-color-navigation-background);
+					color: var(--tapmeppe-color-navigation-foreground);
+				}
+
+				&close-button {
+					font-size: 2em !important;
+					color: var(--tapmeppe-color-secondary) !important;
+				}
+			}
+		}
+	}
+
+	&navigation {
+		&-highlight {
+				background-color: rgba(var(--tapmeppe-color-primary-rgb), .1);
+			}
+		a[href]:not([target=_blank]) > svg {
+			display: none;
+		}
+
+				svg {
+					height: 1em
+		}
+	}
+}

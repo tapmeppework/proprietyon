@@ -1,0 +1,47 @@
+// main: "../style.less"
+
+// ##########
+// DO NOT TOUCH this script unless you know what you are doing.
+// You can contact the admin at all times: patrick.meppe@tapmeppe.work
+// ##########
+
+// :root is in abcd.root.less
+
+// scrollbar
+// @see https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
+::-webkit-scrollbar {
+	--tapmeppe-dim-scrollbar: 12px;
+	width: var(--tapmeppe-dim-scrollbar); // vertical scrollbar width;
+	height: var(--tapmeppe-dim-scrollbar); // horizontal scrollbar height;
+	// padding: var(--tapmeppe-dim-scrollbar); //not working; neither does margin work
+
+	&-track {
+		background: var(--tapmeppe-color-scrollbar-background, @COLOR_PRIMARY);
+	}
+
+	// &-corner {
+	// 	background-color: var(--tapmeppe-scheme-dark)
+	// }
+
+	&-thumb {
+		background: var(--tapmeppe-color-scrollbar-foreground, @COLOR_SECONDARY);
+		border-radius: .375rem;
+		border: solid 2px var(--tapmeppe-color-scrollbar-background, @COLOR_PRIMARY); //work around to simulate a margin|padding
+	}
+}
+
+::placeholder {
+	color: var(--tapmeppe-color-body-foreground) !important;
+	opacity: var(--tapmeppe-opacity-placeholder) !important;
+}
+
+::selection {
+	background-color: var(--tapmeppe-color-body-foreground);
+	color: var(--tapmeppe-color-body-background);
+}
+
+:disabled {
+	pointer-events: none;
+	user-select: none;
+	opacity: var(--tapmeppe-opacity-disabled);
+}

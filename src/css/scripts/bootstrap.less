@@ -1,0 +1,339 @@
+// main: "../style.less"
+
+// ##########
+// DO NOT TOUCH this script unless you know what you are doing.
+// You can contact the admin at all times: patrick.meppe@tapmeppe.work
+// ##########
+
+/**
+ * This script is used to override the bootstrap configuration.
+ * @since PM (09.02.2024)
+ */
+
+// ##########
+// pseudos
+// ##########
+
+:root {
+	// overwrite
+	--bs-body-bg: var(--tapmeppe-color-body-background);
+	--bs-body-bg-rgb: var(--tapmeppe-color-body-background-rgb);
+	--bs-body-color: var(--tapmeppe-color-body-foreground);
+	--bs-body-font-size: var(--tapmeppe-font-size);
+
+	// --bs-border-color: ???;
+	// --bs-border-color-translucent: ???;
+	// --bs-border-radius: ???;
+	--bs-border-width: var(--tapmeppe-border-width);
+
+	// --bs-danger-border-subtle: ???;
+	// --bs-danger-bg-subtle: ???;
+	// --bs-danger-text-emphasis: ???;
+
+	--bs-emphasis-color-rgb: var(--tapmeppe-color-secondary-rgb);
+
+	// --bs-highlight-bg: ???;
+	// --bs-highlight-color: ???;
+
+	--bs-link-color: var(--tapmeppe-color-link);
+	--bs-link-color-rgb: var(--tapmeppe-color-link-rgb);
+	--bs-link-hover-color: var(--tapmeppe-color-primary-active);
+	--bs-link-hover-color-rgb: var(--tapmeppe-color-primary-active-rgb);
+
+	--bs-primary: var(--tapmeppe-color-primary);
+	// --bs-primary-bg: ???
+	// --bs-primary-color: ???
+	--bs-primary-rgb: var(--tapmeppe-color-primary-rgb);
+	--bs-primary-text-emphasis: var(--tapmeppe-color-body-background);
+
+	--bs-secondary: var(--tapmeppe-color-secondary);
+	// --bs-secondary-bg: ???
+	// --bs-secondary-color: ???
+	--bs-secondary-rgb: var(--tapmeppe-color-secondary-rgb);
+	--bs-secondary-text-emphasis: var(--tapmeppe-color-body-background);
+
+	// --bs-warning-border-subtle: ???;
+	// --bs-warning-bg-subtle: ???;
+	// --bs-warning-text-emphasis: ???;
+}
+
+
+// ##########
+// classes
+// ##########
+
+.accordion {
+	--bs-accordion-bg: transparent; //similar to .btn:--bs-btn-bg when outline
+	--bs-accordion-active-bg: var(--tapmeppe-color-primary);
+	--bs-accordion-active-color: var(--tapmeppe-color-foreground);
+	--bs-accordion-btn-color: var(--tapmeppe-color-primary);
+	--bs-accordion-border-color: var(--tapmeppe-color-primary-active);
+	@url: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='rgb(@{COLOR_PRIMARY_RGB})' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e";
+	// DO NOT MERGE
+	--bs-accordion-btn-icon: url(@url);
+	@urlActive: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='rgb(@{COLOR_FOREGROUND_RGB})' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e";
+	// DO NOT MERGE
+	--bs-accordion-btn-active-icon: url(@urlActive);
+	// #463620
+
+	&-button {
+		font-weight: var(--tapmeppe-clickable-font-weight);
+	}
+}
+
+.bg-body {
+	background-color: var(--tapmeppe-color-body-background) !important;
+
+	&-secondary {
+		background-color: var(--tapmeppe-color-body-background) !important;
+		color: var(--tapmeppe-color-body-foreground)
+	}
+}
+
+.btn {
+	--bs-btn-disabled-opacity: var(--tapmeppe-opacity-disabled);
+	--bs-btn-font-weight: var(--tapmeppe-clickable-font-weight);
+
+	.mx_button(primary);
+	.mx_button(secondary);
+	.mx_button(tertiary);
+	.mx_button(brand-linkedin);
+	.mx_button(brand-youtube);
+}
+
+.carousel- {
+	&control- {
+
+		&next,
+		&prev {
+			width: var(--tapmeppe-carousel-button-width, 5%);
+			color: var(--tapmeppe-color-primary);
+			background: rgba(var(--tapmeppe-color-secondary-active-rgb), .1);
+			opacity: .1;
+
+			&:focus,
+			&:hover {
+				color: var(--tapmeppe-color-primary);
+			}
+		}
+	}
+
+	&indicators [data-bs-target] {
+		height: 5px;
+		background-color: var(--tapmeppe-color-primary);
+	}
+}
+
+.dropdown- {
+	&menu {
+		--bs-dropdown-bg: var(--tapmeppe-color-navigation-background);
+		--bs-dropdown-link-color: var(--tapmeppe-color-navigation-foreground);
+	}
+
+	&item {
+		transition: background-color var(--tapmeppe-duration-fade), color var(--tapmeppe-duration-fade);
+
+		&:focus,
+		&:hover {
+			--bs-dropdown-link-hover-bg: var(--tapmeppe-color-navigation-background-active);
+			--bs-dropdown-link-hover-color: var(--tapmeppe-color-navigation-foreground-active);
+		}
+	}
+
+	&toggle {
+		&::after {
+			// margin-left: 1em;
+			transform: scale(1.5);
+		}
+	}
+}
+
+.form- {
+	&check-input {
+		&:checked {
+			background-color: var(--tapmeppe-color-primary-active);
+			border-color: var(--tapmeppe-color-primary-active);
+		}
+
+		&:focus {
+			.mx_form_focus();
+		}
+
+		.form-switch &:enabled,
+		.form-switch &:focus {
+			@url: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgb(@{COLOR_PRIMARY_RGB})'/%3e%3c/svg%3e";
+			// DO NOT MERGE
+			--bs-form-switch-bg: url(@url);
+		}
+
+		.form-switch &:checked {
+			@url: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgb(@{COLOR_SECONDARY_RGB})'/%3e%3c/svg%3e";
+			// DO NOT MERGE
+			--bs-form-switch-bg: url(@url);
+		}
+	}
+
+	&control,
+	&select {
+		&:focus {
+			.mx_form_focus();
+		}
+	}
+
+	&floating {
+		:required + label::after {
+			// display: inline-block;
+			content: " *";
+		}
+	}
+}
+
+.list-group {
+	--bs-list-group-active-color: var(--tapmeppe-color-foreground);
+	--bs-list-group-active-bg: var(--tapmeppe-color-primary);
+	--bs-list-group-active-border-color: var(--tapmeppe-color-primary-active);
+	--bs-list-group-action-active-bg: var(--tapmeppe-color-primary-active);
+	--bs-list-group-action-active-color: var(--tapmeppe-color-foreground);
+	--bs-list-group-action-hover-bg: var(--tapmeppe-color-primary);
+	--bs-list-group-action-hover-color: var(--tapmeppe-color-foreground);
+	// --bs-list-group-disabled-bg: var(--bs-body-bg);
+	// --bs-list-group-disabled-color: var(--bs-secondary-color);
+
+	&-item {
+		&-action {
+
+			&:focus,
+			&:hover {
+				font-weight: var(--tapmeppe-clickable-font-weight);
+			}
+		}
+
+		&.active {
+			font-weight: var(--tapmeppe-clickable-font-weight);
+			--bs-list-group-active-color: var(--tapmeppe-color-secondary);
+			--bs-list-group-active-bg: var(--tapmeppe-color-primary-active);
+			--bs-list-group-active-border-color: var(--tapmeppe-color-primary-active);
+
+			// overwriting
+			// color: var(--bs-list-group-active-color);
+			// background-color: var(--bs-list-group-active-bg);
+			// border-color: var(--bs-list-group-active-border-color);
+		}
+	}
+}
+
+.navbar {
+	--bs-navbar-color: var(--tapmeppe-color-navigation-foreground) !important;
+
+	&:focus,
+	&:hover {
+		--bs-navbar-hover-color: var(--tapmeppe-color-navigation-foreground-active) !important;
+	}
+
+	&-nav .nav-link {
+
+		&.active,
+		&.show {
+			--bs-navbar-active-color: var(--tapmeppe-color-navigation-foreground-active);
+		}
+	}
+}
+
+.nav-link {
+	--bs-nav-link-color: var(--tapmeppe-color-navigation-foreground) !important;
+	--bs-nav-link-font-weight: bold;
+
+	&:focus,
+	&:hover {
+		--bs-nav-link-hover-color: var(--tapmeppe-color-navigation-foreground-active) !important;
+	}
+
+	&:focus-visible {
+		box-shadow: 0 0 0 .25rem rgba(var(--tapmeppe-color-primary-active-rgb), .25);
+	}
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+	--bs-nav-pills-link-active-color: var(--bs-nav-link-color);
+	// color: var(--bs-nav-pills-link-active-color);
+	--bs-nav-pills-link-active-bg: transparent;
+	// background-color: var(--bs-nav-pills-link-active-bg);
+	border: solid var(--bs-border-width) var(--bs-nav-link-color);
+}
+
+.navbar-brand {
+	font-weight: bold;
+}
+
+.placeholder {
+
+	&::selection,
+	::selection {
+		background-color: transparent;
+		color: transparent;
+	}
+}
+
+// @see https://getbootstrap.com/docs/5.3/components/progress/
+.progress {
+	--bs-progress-bg: var(--tapmeppe-color-primary) !important;
+
+	&-stacked {
+		--bs-progress-bg: var(--tapmeppe-color-primary) !important;
+	}
+
+	&-bar {
+		--bs-progress-bar-bg: var(--tapmeppe-color-secondary) !important;
+	}
+}
+
+.text-bg- {
+	&primary {
+		--bs-primary-rgb: var(--tapmeppe-color-primary-active-rgb);
+	}
+
+	&secondary {
+		--bs-secondary-rgb: var(--tapmeppe-color-secondary-active-rgb);
+	}
+}
+
+.text- {
+	&primary {}
+
+	&secondary {}
+}
+
+// @see https://getbootstrap.com/docs/5.3/components/tooltips/#custom-tooltips
+.tooltip {
+	--bs-tooltip-bg: var(--tapmeppe-color-navigation-background);
+	--bs-tooltip-color: var(--tapmeppe-color-navigation-foreground);
+}
+
+
+// ##########
+// attributes
+// ##########
+
+[data-bs-original-title] {
+	.mx_title()
+}
+
+
+// ##########
+// tags
+// ##########
+
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+
+	&:nth-last-child(n + 2) {
+		margin-bottom: .25rem;
+	}
+}
+
+sup {
+	position: initial;
+	vertical-align: super;
+}

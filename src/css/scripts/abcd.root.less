@@ -1,0 +1,111 @@
+// main: "../style.less"
+
+// ##########
+// DO NOT TOUCH this script unless you know what you are doing.
+// You can contact the admin at all times: patrick.meppe@tapmeppe.work
+// ##########
+
+:root {
+	.mx_colors_light();
+
+	@media (prefers-color-scheme: dark) {
+		.mx_colors_dark()
+	}
+
+	@media (prefers-color-scheme: light) {
+		.mx_colors_light()
+	}
+
+	@media (prefers-dark-interface) {
+		// supported on Windows & macOS
+		.mx_colors_dark()
+	}
+
+	// currently done by bootstrap
+	// @see https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+	// @see https://caniuse.com/css-scroll-behavior
+	// @media (prefers-reduced-motion: no-preference) {
+	// 	scroll-behavior: smooth;
+	// }
+
+	@media (prefers-reduced-motion: reduce) {
+		//disable all animations & transitions
+		animation: none !important;
+		transition: none !important;
+	}
+
+	// 
+	--tapmeppe-border-width: 1px;
+	--tapmeppe-clickable-font-weight: bold;
+	// ...
+	// --tapmeppe-dim-container: @BREAKPOINT_LARGE; @BREAKPOINT_LARGE is the default value (value if unset)
+	--tapmeppe-dim-container-large: @BREAKPOINT_LARGE;
+	--tapmeppe-dim-container-medium: @BREAKPOINT_MEDIUM;
+	--tapmeppe-dim-container-small: @BREAKPOINT_SMALL;
+	--tapmeppe-dim-container-tiny: @BREAKPOINT_TINY;
+	--tapmeppe-dim-sweet-spot: @DIMENSION_SWEET_SPOT;
+	// ...
+	--tapmeppe-duration-fade: .15s; //@source bootstrap:fade
+	// ...
+	--tapmeppe-opacity-placeholder: calc(2 * var(--tapmeppe-opacity-disabled));
+	--tapmeppe-opacity-disabled: .25;
+	// ...
+	// @see https://www.w3schools.com/cssref/css_units.asp
+	// --tapmeppe-font-size: 1rem; //1rem = 16px is the default value (value when unset)
+}
+
+html[data-bs-theme=light] {
+	.mx_colors_light()
+}
+
+html[data-bs-theme=dark] {
+	.mx_colors_dark()
+}
+
+// global colors
+:root,
+html[data-bs-theme=dark],
+html[data-bs-theme=light] {
+	// @see https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme
+	// color-scheme: light dark;
+
+	// ...
+	--tapmeppe-color-border-translucent: var(--bs-border-color-translucent);
+	// ...
+	--tapmeppe-color-brand-linkedin: #0072b1;
+	--tapmeppe-color-brand-linkedin-active: var(--tapmeppe-color-brand-linkedin);
+	--tapmeppe-color-brand-youtube: #FF0000;
+	--tapmeppe-color-brand-youtube-active: var(--tapmeppe-color-brand-youtube);
+	// ...
+	--tapmeppe-color-danger: var(--bs-danger);
+	// ...
+	--tapmeppe-color-link: var(--tapmeppe-color-primary-active);
+	--tapmeppe-color-link-rgb: var(--tapmeppe-color-primary-active-rgb);
+	// ...
+	--tapmeppe-color-navigation-background: @COLOR_NAVIGATION_BACKGROUND;
+	--tapmeppe-color-navigation-background-rgb: @COLOR_NAVIGATION_BACKGROUND_RGB;
+	--tapmeppe-color-navigation-background-active: @COLOR_NAVIGATION_BACKGROUND_ACTIVE;
+	--tapmeppe-color-navigation-background-active-rgb: @COLOR_NAVIGATION_BACKGROUND_ACTIVE_RGB;
+	--tapmeppe-color-navigation-foreground: @COLOR_NAVIGATION_FOREGROUND;
+	--tapmeppe-color-navigation-foreground-rgb: @COLOR_NAVIGATION_FOREGROUND_RGB;
+	--tapmeppe-color-navigation-foreground-active: @COLOR_NAVIGATION_FOREGROUND_ACTIVE;
+	--tapmeppe-color-navigation-foreground-active-rgb: @COLOR_NAVIGATION_FOREGROUND_ACTIVE_RGB;
+	// ...
+	--tapmeppe-color-foreground: @COLOR_FOREGROUND;
+	--tapmeppe-color-foreground-rgb: @COLOR_FOREGROUND;
+	// ...
+	--tapmeppe-color-primary: @COLOR_PRIMARY;
+	--tapmeppe-color-primary-rgb: @COLOR_PRIMARY_RGB;
+	--tapmeppe-color-primary-active: @COLOR_PRIMARY_ACTIVE;
+	--tapmeppe-color-primary-active-rgb: @COLOR_PRIMARY_ACTIVE_RGB;
+	// ...
+	--tapmeppe-color-secondary: @COLOR_SECONDARY;
+	--tapmeppe-color-secondary-rgb: @COLOR_SECONDARY_RGB;
+	--tapmeppe-color-secondary-active: @COLOR_SECONDARY_ACTIVE;
+	--tapmeppe-color-secondary-active-rgb: @COLOR_SECONDARY_ACTIVE_RGB;
+	// ...
+	--tapmeppe-color-tertiary: @COLOR_TERTIARY;
+	--tapmeppe-color-tertiary-rgb: @COLOR_TERTIARY_RGB;
+	--tapmeppe-color-tertiary-active: @COLOR_TERTIARY_ACTIVE;
+	--tapmeppe-color-tertiary-active-rgb: @COLOR_TERTIARY_ACTIVE_RGB;
+}

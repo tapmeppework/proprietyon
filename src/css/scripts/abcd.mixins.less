@@ -1,0 +1,102 @@
+// main: "../style.less"
+
+.mx_button(@priority, @foreground0: @COLOR_FOREGROUND) {
+	@variable: ~"--@{UMBRELLA}-color-@{priority}";
+	@active: ~"@{variable}-active";
+	@foreground: ~"@{UMBRELLA}-color-foreground";
+
+	&-@{priority} {
+		--bs-btn-active-bg: var(@active);
+		--bs-btn-active-border-color: var(@active);
+		--bs-btn-active-color: var(@foreground, @foreground0);
+		--bs-btn-bg: var(@variable);
+		--bs-btn-border-color: var(@variable);
+		--bs-btn-color: var(@foreground, @foreground0);
+		--bs-btn-disabled-color: var(@foreground, @foreground0);
+		--bs-btn-disabled-bg: var(@variable);
+		--bs-btn-disabled-border-color: var(@active);
+		--bs-btn-hover-bg: var(@active);
+		--bs-btn-hover-border-color: var(@active);
+		--bs-btn-hover-color: var(@foreground, @foreground0);
+	}
+
+	&-outline-@{priority} {
+		--bs-btn-active-bg: var(@active);
+		--bs-btn-active-border-color: var(@active);
+		--bs-btn-active-color: var(@foreground, @foreground0);
+		--bs-btn-border-color: var(@variable);
+		--bs-btn-color: var(@variable);
+		--bs-btn-disabled-color: var(@variable);
+		--bs-btn-disabled-border-color: var(@active);
+		--bs-btn-hover-bg: var(@active);
+		--bs-btn-hover-border-color: var(@active);
+		--bs-btn-hover-color: var(@foreground, @foreground0);
+	}
+}
+
+.mx_colors_dark() {
+	// @see https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme
+	color-scheme: dark;
+
+	--tapmeppe-color-body-background: @COLOR_DARK_BACKGROUND_PRIMARY;
+	--tapmeppe-color-body-background-rgb: @COLOR_DARK_BACKGROUND_PRIMARY_RGB;
+	--tapmeppe-color-body-foreground: @COLOR_DARK_FOREGROUND;
+	// --tapmeppe-color-block-odd: @COLOR_DARK_BACKGROUND_PRIMARY;
+	--tapmeppe-color-block-even: @COLOR_DARK_BACKGROUND_SECONDARY;
+	--tapmeppe-color-block-floating: @COLOR_DARK_BACKGROUND_TERTIARY;
+	// ...
+	--tapmeppe-color-zyxw: darkmagenta !important;
+}
+
+.mx_colors_light() {
+	// @see https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme
+	color-scheme: light;
+
+	--tapmeppe-color-body-background: @COLOR_LIGHT_BACKGROUND_PRIMARY;
+	--tapmeppe-color-body-background-rgb: @COLOR_LIGHT_BACKGROUND_PRIMARY_RGB;
+	--tapmeppe-color-body-foreground: @COLOR_LIGHT_FOREGROUND;
+	// --tapmeppe-color-block-odd: @COLOR_LIGHT_BACKGROUND_PRIMARY;
+	--tapmeppe-color-block-even: @COLOR_LIGHT_BACKGROUND_SECONDARY;
+	--tapmeppe-color-block-floating: @COLOR_LIGHT_BACKGROUND_TERTIARY;
+	// ...
+	--tapmeppe-color-zyxw: magenta !important;
+}
+
+.mx_dashed() {
+	// text-decoration: underline;
+	border-bottom: dashed;
+	border-width: calc(2 * var(--tapmeppe-border-width));
+}
+
+.mx_flex_center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mx_form_focus() {
+	border-color: var(--tapmeppe-color-primary);
+	box-shadow: 0 0 0 .25rem rgba(var(--tapmeppe-color-primary-rgb), .25);
+}
+
+.mx_hide() {
+	display: none;
+}
+
+.mx_title() {
+	&::after {
+		// content: '\1F3F7'; //label
+		// content: '\1F56B'; //bullhorn
+		// content: '\1F588'; //pushpin
+		// content: '\1F4E2'; //loudspeaker
+		// content: '\1F4CE'; //paperclip
+	}
+
+	&:not(button):not(a[href]) {
+		cursor: help;
+	}
+
+	p span& {
+		.mx_dashed();
+	}
+}
