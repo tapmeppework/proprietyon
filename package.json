@@ -1,13 +1,14 @@
 {
   "name": "@tapmeppe/proprietyon",
-	"version": "0.5.1",
+	"version": "0.5.2",
 	"main": "main.js",
   "scripts": {
 		"dev": "cls && node main.js",
 		"start": "node main.js",
 		"test": "cls && node maintenance.js test",
 		"deploy": "cls && node maintenance.js deploy",
-		"publish": "cls && node maintenance.js publish"
+		"publish": "cls && node maintenance.js publish",
+		"zyxw": "cls && node maintenance.js zyxw"
   },
 	"author": "Patrick Meppe (patrick.meppe@tapmeppe.work)",
 	"license": "MIT license",

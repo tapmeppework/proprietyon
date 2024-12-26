@@ -145,7 +145,7 @@
 	 * bootstrap tooltip
 	 * @see https://getbootstrap.com/docs/5.3/components/tooltips
 	 */
-	document.querySelectorAll('[data-bs-toggle=tooltip],[title]')
+	document.querySelectorAll('body [data-bs-toggle=tooltip], body [title]')
 		.forEach(element => new bootstrap.Tooltip(element, { html: true }))
 	
 	/**
