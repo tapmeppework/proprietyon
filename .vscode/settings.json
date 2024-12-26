@@ -3,30 +3,59 @@
 // So I went on the hunt and discovered BrowserSync. But I'm leaving this here for the future. Maybe you can make it work. Good luck! :-)
 // @see https://github.com/ritwickdey/vscode-live-server/blob/master/docs/settings.md
 {
-	"liveServer.settings.file": "/src/pages/index.html",
-	"liveServer.settings.ignoreFiles": [
-		".vscode/**",
-		"builds/**",
-		"node_modules/**",
-		"main*.js",
-		"package.*json",
-		"*.md",
-		"*.less",
-		"*.css.map",
-	],
-	"liveServer.settings.mount": [
-		[
-			"/",
-			"/public"
-		],
-		[
-			"/",
-			"/src"
-		],
-		[
-			"/",
-			"/src/pages"
-		],
-	],
-	"liveServer.settings.port": 9013
+	// editor settings - uncomment to override defaults
+	// "editor.detectIndentation": true,
+	// "editor.tabSize": 2,
+	// "explorer.fileNesting.enabled": true,
+	// "explorer.fileNesting.expand": false,
+
+	// less settings
+	"less.compile": {
+		"compress": true,
+		"sourceMap": true,
+		"relativeUrls": false,
+		"autoprefixer": "> 5%, last 2 versions, Firefox ESR, not ie <= 11, not dead",
+		"ieCompat": false
+	},
+	"less.format.spaceAroundSelectorSeparator": true,
+	"less.lint.duplicateProperties": "warning",
+	"less.lint.idSelector": "warning",
+	"less.lint.ieHack": "error",
+	"less.lint.universalSelector": "warning",
+	"less.lint.zeroUnits": "warning",
+
+	// LiveServer settings - uncomment if you want to try making it work with LiveServer
+	// "liveServer.settings.file": "/src/pages/index.html",
+	// "liveServer.settings.ignoreFiles": [
+	// 	".vscode/**",
+	// 	"builds/**",
+	// 	"node_modules/**",
+	// 	"main*.js",
+	// 	"package.*json",
+	// 	"*.md",
+	// 	"*.less",
+	// 	"*.css.map",
+	// ],
+	// "liveServer.settings.mount": [
+	// 	[
+	// 		"/",
+	// 		"/public"
+	// 	],
+	// 	[
+	// 		"/",
+	// 		"/src"
+	// 	],
+	// 	[
+	// 		"/",
+	// 		"/src/pages"
+	// 	],
+	// ],
+	// "liveServer.settings.port": 9013,
+
+	// search settings
+	"search.useIgnoreFiles": false,
+	"search.exclude": {
+		"**/build*": true,
+		"**/dist": true,
+	},
 }

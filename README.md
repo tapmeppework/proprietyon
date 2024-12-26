@@ -32,4 +32,4 @@ The application will then open in your default web browser.
 - `src/pages` The directory contains the structure: *.html.
 
 ---
-### PM (17.12.2024)
+### t@pm3pp3 w0rk (17.12.2024)
