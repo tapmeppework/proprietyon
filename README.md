@@ -1,7 +1,7 @@
 # Proprietyon
 
 ## Introduction
-The environment is used to build the website of company: t@pm3pp3 w0rk. 
+This environment is used to build the website of company: t@pm3pp3 w0rk. 
 The result can be seen here: https://tapmeppe.work .
 The hot-reload is inspired by [vite](https://vite.dev/) and implemented thanks to [BrowserSync](https://browsersync.io/).
 

@@ -1,4 +1,5 @@
 /**
+ * #PM (26.12.2024)
  * @see https://browsersync.io/
  * @see https://browsersync.io/docs
  * @see https://browsersync.io/docs/options
