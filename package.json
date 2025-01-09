@@ -1,6 +1,6 @@
 {
   "name": "@tapmeppe/proprietyon",
-	"version": "0.5.2",
+	"version": "0.5.3",
 	"main": "main.js",
   "scripts": {
 		"dev": "cls && node main.js",
