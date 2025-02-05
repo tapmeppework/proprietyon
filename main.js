@@ -6,6 +6,7 @@
  */
 const
 	fs = require('node:fs'),
+	path = require('node:path'),
 	browserSync = require('browser-sync').create(),
 	pages = 'src/pages',
 	index = 'index.html',
@@ -28,6 +29,13 @@ fs.watch(
 	() => {
 		clearTimeout(timeout)	// Reset the timeout to prevent multiple changes
 		timeout = setTimeout(copy, 1000)
+	}
+)
+fs.mkdir(
+	path.dirname(fallback),
+	{ recursive: true }, error => {
+		if (error) throw error
+		// console.log(`'${fallback}' was created`)
 	}
 )
 copy()
